@@ -12,24 +12,30 @@ public class BaseWeapon : MonoBehaviour
         ArrowThrough
     }
 
-    public WeaponDefect[] defects;
+    public List<WeaponDefect> defects;
+
+
 
 
     public void GenerateRandomDefects(int numOfDefects) {
         if(numOfDefects == 0) return;
-        defects = new WeaponDefect[numOfDefects];
+        defects = new  List<WeaponDefect> ();
 
         for(int i = 0; i < numOfDefects; i++) {
             WeaponDefect defect = (WeaponDefect) Random.Range(0, System.Enum.GetValues(typeof(WeaponDefect)).Length);
-            while (System.Array.FindIndex(defects, x => x == defect) != -1) {
+            while (defects.Contains(defect)) {
                 defect = (WeaponDefect) Random.Range(0, System.Enum.GetValues(typeof(WeaponDefect)).Length);
             }
-            defects[i] = defect;
+            defects.Add(defect);
         }
     }
 
+    public bool containsDefect(WeaponDefect defect) {
+        return (defects.Contains(defect));
+    }
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         GenerateRandomDefects(2);
         
@@ -44,7 +50,7 @@ public class BaseWeapon : MonoBehaviour
     }
 
     public bool isFixed() {
-        if(defects.Length == 0) {
+        if(defects.Count == 0) {
             return true;
         }
         return false;
