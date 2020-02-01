@@ -5,7 +5,7 @@ using UnityEngine;
 public class GrinstoneWheel : MonoBehaviour
 {
     public bool IsOn = true;
-    public float speed = 2f;
+    public float speed = 10f;
 
 
     void Update()
