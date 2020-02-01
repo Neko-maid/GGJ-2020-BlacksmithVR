@@ -32,7 +32,7 @@ public class Shield : BaseWeapon
     }
 
     void OnTriggerExit(Collider col) {
-        if(col.gameObject.Equals(arrow1) || col.gameObject.Equals(arrow2) || col.gameObject.Equals(arrow2) ) {
+        if(col.gameObject.Equals(arrow1) || col.gameObject.Equals(arrow2) || col.gameObject.Equals(arrow3) ) {
             col.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             arrowExitCount += 1;
             Debug.Log("Arrow removed");
