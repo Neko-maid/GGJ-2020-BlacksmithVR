@@ -14,8 +14,11 @@ public class BaseWeapon : MonoBehaviour
 
     public List<WeaponDefect> defects;
 
+    public float polishAmount;
+    public Material rusted;
+    public Material defaultMat;
 
-
+    public GameObject polishPart;
 
     public void GenerateRandomDefects(int numOfDefects) {
         if(numOfDefects == 0) return;
@@ -37,16 +40,26 @@ public class BaseWeapon : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        defaultMat = polishPart.GetComponent<MeshRenderer> ().material;
         GenerateRandomDefects(2);
         
         Debug.Log(defects[0]);
         Debug.Log(defects[1]);
+
+        if(containsDefect(WeaponDefect.Unpolished)) {
+            RequirePolish();
+        }
+
+        
+
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        if(containsDefect(WeaponDefect.Unpolished)) {
+            CheckPolish();
+        }
     }
 
     public bool isFixed() {
@@ -54,5 +67,18 @@ public class BaseWeapon : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    void RequirePolish() {
+        polishAmount = 100f;
+        polishPart.GetComponent<MeshRenderer> ().material = rusted;
+
+    }
+
+    void CheckPolish() {
+        if(polishAmount < 0f) {
+            polishPart.GetComponent<MeshRenderer> ().material = defaultMat; 
+            defects.Remove(WeaponDefect.Unpolished);
+        }
     }
 }
