@@ -67,8 +67,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1143224677132974437}
   - component: {fileID: 1143224677132974490}
-  - component: {fileID: 2928601961650310294}
   - component: {fileID: 5342230804654355238}
+  - component: {fileID: 8455215626667337686}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -108,19 +108,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2928601961650310294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143224677132974436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef0533920259846448a779c0d3f38bdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defects: 
 --- !u!114 &5342230804654355238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +126,37 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 1143224675894121549}
+--- !u!114 &8455215626667337686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143224677132974436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9b67fc45e63ff448e82f54f0485e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defects: 
+  rusted: {fileID: 2100000, guid: ff3a20f7cffaefd4a85c29f0cb4d043b, type: 2}
+  polishPart: {fileID: 7824310529755442550}
+--- !u!54 &603315966
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824310529755442550}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &1143224675894121551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -214,10 +232,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2069399416329291458, guid: 70f12dfd46255462fbcf035cd2165676,
+        type: 3}
+      propertyPath: m_Name
+      value: AxeHead
+      objectReference: {fileID: 0}
+    - target: {fileID: -2069399416329291458, guid: 70f12dfd46255462fbcf035cd2165676,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blade
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 70f12dfd46255462fbcf035cd2165676,
         type: 3}
       propertyPath: m_Name
       value: model
+      objectReference: {fileID: 0}
+    - target: {fileID: 956264165730192494, guid: 70f12dfd46255462fbcf035cd2165676,
+        type: 3}
+      propertyPath: m_Name
+      value: AxeHandle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70f12dfd46255462fbcf035cd2165676, type: 3}
