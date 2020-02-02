@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public static float timeLeft = 10;
-    public int score;
+    public static float timeLeft = 15;
+    public static int score;
     public int numWeaponsFixed;
+    public TextMesh timer;
+    public TextMesh scoreMesh;
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +23,20 @@ public class GameController : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
         } 
+
+        scoreMesh.text = "" + score;
+
+        if (timeLeft < 10)
+        {
+            timer.color = Color.red;
+        }
+        if (timeLeft > 0)
+        {
+            timer.text = "" + Mathf.RoundToInt(GameController.timeLeft);
+        }
+        else 
+        { 
+            timer.text = "Game Over";
+        }
     }
 }
