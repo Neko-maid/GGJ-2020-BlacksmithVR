@@ -1626,20 +1626,25 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Score: 0'
       objectReference: {fileID: 0}
+    - target: {fileID: 5925187976201845285, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
+        type: 3}
+      propertyPath: m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5925187976201845287, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7120008
+      value: -1.697
       objectReference: {fileID: 0}
     - target: {fileID: 5925187976201845287, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.151
+      value: 2.617
       objectReference: {fileID: 0}
     - target: {fileID: 5925187976201845287, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.147087
+      value: 1.998
       objectReference: {fileID: 0}
     - target: {fileID: 5925187976201845287, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
         type: 3}
@@ -4100,20 +4105,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer
       objectReference: {fileID: 0}
+    - target: {fileID: 5925187976201845285, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
+        type: 3}
+      propertyPath: m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5925187976201845287, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7120008
+      value: -2.003
       objectReference: {fileID: 0}
     - target: {fileID: 5925187976201845287, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.686566
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: 5925187976201845287, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.147087
+      value: 1.9980003
       objectReference: {fileID: 0}
     - target: {fileID: 5925187976201845287, guid: 0de2a18a21d31cb4e91e43d7dcce900c,
         type: 3}
