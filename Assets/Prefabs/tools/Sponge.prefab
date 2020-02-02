@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7011113290829837231}
   - component: {fileID: 7011113290829837230}
   - component: {fileID: 3057325460694233427}
+  - component: {fileID: 8450159124463883039}
   m_Layer: 0
   m_Name: Sponge
   m_TagString: Untagged
@@ -106,3 +107,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7e875e1bed0df48b788869e651ad4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8450159124463883039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011113290829837229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 176f983b8cc3cd548a4d3a175d4b5f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints:
+  - {fileID: 7011113290829837230}
+  joint: {fileID: 0}
