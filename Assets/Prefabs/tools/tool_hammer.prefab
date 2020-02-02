@@ -90,6 +90,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6321016499b63234ab299f6c2b8e90c2, type: 3}
   - {fileID: 8300000, guid: d03461c57c783084abd8614c20775557, type: 3}
   - {fileID: 8300000, guid: 071de31bd30cf3f42bd22bf0af561f42, type: 3}
+  clatters:
+  - {fileID: 8300000, guid: fb9970c6132e6f740a7e478f0407f912, type: 3}
+  - {fileID: 8300000, guid: 3393e95a265610f439195517a0f2bba4, type: 3}
+  - {fileID: 8300000, guid: 8f8bd948457ca2e478b474899480777e, type: 3}
   hammerhead: {fileID: 8655819091532598342}
 --- !u!82 &681952715
 AudioSource:
