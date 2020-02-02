@@ -18,9 +18,9 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        SpawnPrefab(WeaponPrefabs[RandomNumber()]);
+        //SpawnPrefab(WeaponPrefabs[RandomNumber()]);
 
-        IsWeaponActive = true;
+        //IsWeaponActive = true;
     }
 
     private void SpawnPrefab(GameObject weapon)
@@ -35,8 +35,11 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (!IsWeaponActive) SpawnPrefab(WeaponPrefabs[RandomNumber()]);
-
+        if (!IsWeaponActive)
+        {
+            SpawnPrefab(WeaponPrefabs[RandomNumber()]);
+            IsWeaponActive = true;
+        }
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;

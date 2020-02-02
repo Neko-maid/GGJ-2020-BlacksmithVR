@@ -43,7 +43,7 @@ public class BaseWeapon : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        GameController = GameObject.FindGameObjectsWithTag("GameController")[0].gameObject.GetComponent<GameController>();
+        GameController = GameObject.FindGameObjectWithTag("GameController").gameObject.GetComponent<GameController>();
 
         hasGivenPoints = false;
         defaultMat = polishPart.GetComponent<MeshRenderer> ().material;
@@ -73,8 +73,8 @@ public class BaseWeapon : MonoBehaviour
 
             GameController.IsWeaponActive = false;
 
-            gameObject.SetActive(false);
-            Destroy(this);
+            //gameObject.SetActive(false);
+            //Destroy(this);
         }
     }
 
