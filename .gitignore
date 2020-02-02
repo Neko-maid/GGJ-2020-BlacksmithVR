@@ -94,8 +94,6 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-Assets/Oculus/Platform/Samples/*
-Assets/Oculus/SampleFramework/*
 
 # Chutzpah Test files
 _Chutzpah*
