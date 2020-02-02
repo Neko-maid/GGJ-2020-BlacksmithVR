@@ -7,8 +7,6 @@ public class BaseWeapon : MonoBehaviour
     public enum WeaponDefect {
         Blunt, 
         Unpolished,
-        Broken,
-        Bent,
         ArrowThrough
     }
 
@@ -17,8 +15,10 @@ public class BaseWeapon : MonoBehaviour
     public float polishAmount;
     public Material rusted;
     public Material defaultMat;
-
+    bool hasGivenPoints;
     public GameObject polishPart;
+    int multiplier;
+    public int points;
 
     public void GenerateRandomDefects(int numOfDefects) {
         if(numOfDefects == 0) return;
@@ -31,6 +31,7 @@ public class BaseWeapon : MonoBehaviour
             }
             defects.Add(defect);
         }
+        multiplier = defects.Count;
     }
 
     public bool containsDefect(WeaponDefect defect) {
@@ -40,6 +41,7 @@ public class BaseWeapon : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        hasGivenPoints = false;
         defaultMat = polishPart.GetComponent<MeshRenderer> ().material;
         GenerateRandomDefects(2);
         
@@ -59,6 +61,11 @@ public class BaseWeapon : MonoBehaviour
     {
         if(containsDefect(WeaponDefect.Unpolished)) {
             CheckPolish();
+        }
+
+        if (isFixed() && !hasGivenPoints) {
+            GameController.score += score * multiplier;
+            hasGivenPoints = true;
         }
     }
 
