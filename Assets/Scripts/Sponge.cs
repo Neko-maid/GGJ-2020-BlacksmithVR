@@ -35,4 +35,21 @@ public class Sponge : MonoBehaviour
 
         }
     }
+
+    void OnTriggerEnter(Collider col) {
+        if(col.gameObject.tag == "Blade" && col.gameObject.GetComponentInParent<BaseWeapon>()) {
+            Debug.Log("I am touch " + col.gameObject);
+            lastPolished = col.gameObject.GetComponentInParent<BaseWeapon>();
+        }
+    }
+
+    void OnTriggerStay(Collider col)
+    {
+        Debug.Log("we stay");
+        if(col.gameObject.tag == "Blade") {
+            Debug.Log(rigidbody.velocity.magnitude);
+            lastPolished.polishAmount -= rigidbody.velocity.magnitude;
+
+        }
+    }
 }

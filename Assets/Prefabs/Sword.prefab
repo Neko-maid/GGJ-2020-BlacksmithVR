@@ -101,7 +101,8 @@ MonoBehaviour:
   rusted: {fileID: 0}
   defaultMat: {fileID: 0}
   polishPart: {fileID: 0}
-  points: 0
+  points: 100
+  GameController: {fileID: 0}
   TotalTime: 8
   TimeSharpened: 0
 --- !u!54 &2465103395568630984
