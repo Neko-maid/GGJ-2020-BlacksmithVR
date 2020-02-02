@@ -29,6 +29,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3107424, y: 1.0150743, z: 1.172667}
   m_Center: {x: 0, y: 0.6405175, z: -0.016842365}
+--- !u!114 &478602532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546572701976284641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 176f983b8cc3cd548a4d3a175d4b5f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints:
+  - {fileID: 1546572701559282734}
+  joint: {fileID: 0}
 --- !u!114 &8273832226345560306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,25 +68,6 @@ MonoBehaviour:
   arrow1: {fileID: 3412427492269644471}
   arrow2: {fileID: 5372173279370622557}
   arrow3: {fileID: 8017082072260291028}
---- !u!114 &478602532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546572701976284641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 176f983b8cc3cd548a4d3a175d4b5f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints:
-  - {fileID: 1546572701559282734}
-  joint: {fileID: 0}
 --- !u!138 &4554664075543029737
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -177,6 +177,14 @@ PrefabInstance:
     - target: {fileID: 127192, guid: dd93966018ccadd459c92701f0e8e129, type: 3}
       propertyPath: m_Name
       value: ShieldBroken
+      objectReference: {fileID: 0}
+    - target: {fileID: 127192, guid: dd93966018ccadd459c92701f0e8e129, type: 3}
+      propertyPath: m_TagString
+      value: Blade
+      objectReference: {fileID: 0}
+    - target: {fileID: 142364, guid: dd93966018ccadd459c92701f0e8e129, type: 3}
+      propertyPath: m_TagString
+      value: Blade
       objectReference: {fileID: 0}
     - target: {fileID: 407466, guid: dd93966018ccadd459c92701f0e8e129, type: 3}
       propertyPath: m_LocalPosition.x

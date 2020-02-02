@@ -23,8 +23,6 @@ public class Sponge : MonoBehaviour
         if(collision.gameObject.tag == "Blade" && collision.gameObject.GetComponentInParent<BaseWeapon>()) {
             lastPolished = collision.gameObject.GetComponentInParent<BaseWeapon>();
         }
-        
-        
     }
 
     void OnCollisionStay(Collision collision)
