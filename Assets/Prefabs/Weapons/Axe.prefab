@@ -85,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 1143224677132974436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.903}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1143224677053896456}
   - {fileID: 5379329885329751890}
@@ -139,8 +139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defects: 
+  polishAmount: 0
   rusted: {fileID: 2100000, guid: ff3a20f7cffaefd4a85c29f0cb4d043b, type: 2}
+  defaultMat: {fileID: 0}
   polishPart: {fileID: 7824310529755442550}
+  points: 0
 --- !u!54 &603315966
 Rigidbody:
   m_ObjectHideFlags: 0
