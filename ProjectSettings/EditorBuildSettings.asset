@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BlkSmithVR.unity
     guid: 93a36e794177b654a8d18b75259eac42
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/greybox.unity
     guid: 37aca63fab6a8ff479dbcd4fab20826e
   - enabled: 1
-    path: Assets/Models/Sword/sword.unity
+    path: Assets/Scenes/Sample landscape.unity
     guid: 6ec6b5aa4cbaa4da99d5734505789922
   m_configObjects: {}
