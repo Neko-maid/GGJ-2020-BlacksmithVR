@@ -10,13 +10,29 @@ public class GameController : MonoBehaviour
     public TextMesh timer;
     public TextMesh scoreMesh;
 
-    // Start is called before the first frame update
+    public GameObject[] WeaponPrefabs;
+    public Transform SpawnLocation;
+
+    private bool IsWeaponActive = false;
+
+
     void Start()
     {
-        
+        SpawnPrefab(WeaponPrefabs[RandomNumber()]);
+
+        IsWeaponActive = true;
     }
 
-    // Update is called once per frame
+    private void SpawnPrefab(GameObject weapon)
+    {
+        Instantiate(weapon, SpawnLocation.transform.position, Quaternion.identity);
+    }
+
+    private int RandomNumber()
+    {
+        return Random.Range(0, WeaponPrefabs.Length);
+    }
+
     void Update()
     {
         if (timeLeft > 0)
