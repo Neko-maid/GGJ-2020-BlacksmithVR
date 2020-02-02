@@ -2399,8 +2399,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 628124762}
-  - {fileID: 114990699}
   - {fileID: 203304407}
+  - {fileID: 114990699}
   - {fileID: 748418085}
   - {fileID: 1283250750}
   - {fileID: 1052739202783573436}
@@ -2967,6 +2967,11 @@ PrefabInstance:
     - target: {fileID: 8218399799865229887, guid: 1861aea1e5a3d4a0ba7bfa5753ea293e,
         type: 3}
       propertyPath: m_Name
+      value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218399799865229887, guid: 1861aea1e5a3d4a0ba7bfa5753ea293e,
+        type: 3}
+      propertyPath: m_TagString
       value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 8976109090569052519, guid: 1861aea1e5a3d4a0ba7bfa5753ea293e,
