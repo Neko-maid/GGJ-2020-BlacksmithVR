@@ -9,20 +9,13 @@ public class SwordSharpening : MonoBehaviour
     private Renderer rend;
 
 
-    // Start is called before the first frame update
+
     void Start()
     {
         rend = GetComponent<Renderer>();
 
-        // Use the Specular shader on the material
-        //rend.material.shader = Shader.Find("custom/Blend");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionStay(Collision collision)
     {
