@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     public GameObject[] WeaponPrefabs;
     public Transform SpawnLocation;
 
-    private bool IsWeaponActive = false;
+    public bool IsWeaponActive = false;
 
 
     void Start()
@@ -35,6 +35,8 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        if (!IsWeaponActive) SpawnPrefab(WeaponPrefabs[RandomNumber()]);
+
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
