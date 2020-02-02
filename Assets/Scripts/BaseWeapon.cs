@@ -20,6 +20,8 @@ public class BaseWeapon : MonoBehaviour
     int multiplier;
     public int points;
 
+    public GameController GameController;
+
     public void GenerateRandomDefects(int numOfDefects) {
         if(numOfDefects == 0) return;
         defects = new  List<WeaponDefect> ();
@@ -41,6 +43,8 @@ public class BaseWeapon : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        GameController = GameObject.FindGameObjectsWithTag("GameController")[0].gameObject.GetComponent<GameController>();
+
         hasGivenPoints = false;
         defaultMat = polishPart.GetComponent<MeshRenderer> ().material;
         GenerateRandomDefects(2);
@@ -66,6 +70,11 @@ public class BaseWeapon : MonoBehaviour
         if (isFixed() && !hasGivenPoints) {
             GameController.score += points * multiplier;
             hasGivenPoints = true;
+
+            GameController.IsWeaponActive = false;
+
+            gameObject.SetActive(false);
+            Destroy(this);
         }
     }
 
@@ -76,8 +85,8 @@ public class BaseWeapon : MonoBehaviour
         return false;
     }
 
-    void RequirePolish() {
-        polishAmount = 100f;
+    public void RequirePolish() {
+        polishAmount = 4f;
         polishPart.GetComponent<MeshRenderer> ().material = rusted;
 
     }

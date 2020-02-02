@@ -21,14 +21,14 @@ public class Sponge : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.tag == "Blade" && collision.gameObject.GetComponentInParent<BaseWeapon>()) {
+            Debug.Log("I am touch " + collision.gameObject);
             lastPolished = collision.gameObject.GetComponentInParent<BaseWeapon>();
         }
-        
-        
     }
 
     void OnCollisionStay(Collision collision)
     {
+        Debug.Log("we stay");
         if(collision.gameObject.tag == "Blade") {
             Debug.Log(rigidbody.velocity.magnitude);
             lastPolished.polishAmount -= rigidbody.velocity.magnitude;
