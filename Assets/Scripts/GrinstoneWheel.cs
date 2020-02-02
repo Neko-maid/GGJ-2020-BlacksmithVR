@@ -18,7 +18,7 @@ public class GrinstoneWheel : MonoBehaviour
 
     void RotateWheel()
     {
-        Vector3 axis = new Vector3(0, 1, 0);
+        Vector3 axis = new Vector3(0, -1, 0);
         transform.Rotate(axis, speed);
     }
 }

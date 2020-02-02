@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Blade
   - floor
+  - Grindstone
   layers:
   - Default
   - TransparentFX
