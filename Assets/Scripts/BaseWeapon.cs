@@ -76,8 +76,8 @@ public class BaseWeapon : MonoBehaviour
         return false;
     }
 
-    void RequirePolish() {
-        polishAmount = 100f;
+    public void RequirePolish() {
+        polishAmount = 4f;
         polishPart.GetComponent<MeshRenderer> ().material = rusted;
 
     }

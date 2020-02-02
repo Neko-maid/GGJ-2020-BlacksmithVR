@@ -19,7 +19,7 @@ public class Hammer : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Collider col = collision.contacts[0].thisCollider;
-        if (collision.relativeVelocity.magnitude > 4.0f)
+        if (collision.relativeVelocity.magnitude > 3.0f)
         {
              int i = Random.Range(0, audio_clips.Count);
             m_asource.PlayOneShot(clatters[i]);

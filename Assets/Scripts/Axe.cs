@@ -10,6 +10,12 @@ public class Axe : BaseWeapon
     void Start()
     {
         base.Start();
+        defects = new List<WeaponDefect>();
+        defects.Add(WeaponDefect.Unpolished);
+
+        if(containsDefect(WeaponDefect.Unpolished)) {
+            RequirePolish();
+        }
         
     }
 
