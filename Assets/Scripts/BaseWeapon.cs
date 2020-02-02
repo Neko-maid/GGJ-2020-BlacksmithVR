@@ -64,7 +64,7 @@ public class BaseWeapon : MonoBehaviour
         }
 
         if (isFixed() && !hasGivenPoints) {
-            GameController.score += score * multiplier;
+            GameController.score += points * multiplier;
             hasGivenPoints = true;
         }
     }

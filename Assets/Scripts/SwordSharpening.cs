@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordSharpening : MonoBehaviour
+public class SwordSharpening : BaseWeapon
 {
     public float TotalTime = 6f;
     public float TimeSharpened = 0f;
@@ -10,7 +10,7 @@ public class SwordSharpening : MonoBehaviour
 
 
 
-    void Start()
+    new void Start()
     {
         rend = GetComponent<Renderer>();
 
