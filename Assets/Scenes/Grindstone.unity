@@ -410,6 +410,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &459615814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6763562909081204545, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_Name
+      value: BLK_Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.048
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763562909081365345, guid: 27ee035b992a39a4684c949b3550176b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27ee035b992a39a4684c949b3550176b, type: 3}
 --- !u!1 &816265898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: b727e93038d67f44badb75af9a06c81f,
@@ -429,7 +498,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.88147116, y: 3.1819096, z: 0.49512365}
   m_Center: {x: -0.008547342, y: -2.2578936, z: 0.0063242665}
---- !u!114 &816265900
+--- !u!145 &816265900
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816265898}
+  m_ConnectedBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 18.670004, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0.61950034, y: 1.1624999, z: -0.00000011920929}
+  serializedVersion: 2
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 0
+  m_Tolerance: 0.025
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!114 &816265901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -438,7 +530,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 816265898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 176f983b8cc3cd548a4d3a175d4b5f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -447,6 +539,8 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 816265903}
+  - {fileID: 816265899}
+  joint: {fileID: 0}
 --- !u!54 &816265902
 Rigidbody:
   m_ObjectHideFlags: 0
