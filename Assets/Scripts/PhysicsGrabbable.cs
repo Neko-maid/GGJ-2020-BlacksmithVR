@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class PhysicsGrabbable : OVRGrabbable
 {
-    public SpringJoint joint;
-
-    override protected void Start()
-    {
-        joint = gameObject.AddComponent<SpringJoint>();
-        joint.autoConfigureConnectedAnchor = true;
-    }
+    
+    public FixedJoint joint = null;
 
     override public void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
         m_grabbedBy = hand;
         m_grabbedCollider = grabPoint;
-        joint.connectedBody = hand.gameObject.GetComponent<Rigidbody>();
+        
+        joint = gameObject.AddComponent<FixedJoint>();
+        joint.autoConfigureConnectedAnchor = true;
+        joint.connectedBody = hand.GetComponent<Rigidbody>();
     }
 
     override public void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-        joint.connectedBody = null;
+        Destroy(joint);
+
         rb.velocity = linearVelocity;
         rb.angularVelocity = angularVelocity;
         m_grabbedBy = null;
