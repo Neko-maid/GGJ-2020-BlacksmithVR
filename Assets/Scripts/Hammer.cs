@@ -6,6 +6,7 @@ public class Hammer : MonoBehaviour
 {
 
     public List<AudioClip> audio_clips;
+    public List<AudioClip> clatters;
 
     private AudioSource m_asource;
     public GameObject hammerhead;
@@ -18,7 +19,12 @@ public class Hammer : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Collider col = collision.contacts[0].thisCollider;
-        if (col.gameObject == hammerhead)
+        if (collision.relativeVelocity.magnitude > 4.0f)
+        {
+             int i = Random.Range(0, audio_clips.Count);
+            m_asource.PlayOneShot(clatters[i]);
+        }
+        else if (col.gameObject == hammerhead)
         {
             int i = Random.Range(0, audio_clips.Count);
             m_asource.PlayOneShot(audio_clips[i]);
