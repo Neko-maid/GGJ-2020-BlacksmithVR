@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public static float timeLeft = 15;
+    public static float timeLeft = 90;
     public static int score;
     public int numWeaponsFixed;
     public TextMesh timer;
@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
             timeLeft -= Time.deltaTime;
         } 
 
-        scoreMesh.text = "" + score;
+        scoreMesh.text = "Score: " + score;
 
         if (timeLeft < 10)
         {
@@ -58,6 +58,11 @@ public class GameController : MonoBehaviour
         else 
         { 
             timer.text = "Game Over";
+        }
+
+        if (OVRInput.GetDown(OVRInput.RawButton.Y) || OVRInput.GetDown(OVRInput.RawButton.B))
+        {
+            Application.LoadLevel(Application.loadedLevel);
         }
     }
 }

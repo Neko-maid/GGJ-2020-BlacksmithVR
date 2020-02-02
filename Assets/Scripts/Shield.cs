@@ -22,6 +22,14 @@ public class Shield : BaseWeapon
             arrow3.gameObject.SetActive(true);
             arrowExitCount = 0;
         }
+
+        if(containsDefect(WeaponDefect.Blunt)) {
+            defects.Remove(WeaponDefect.Blunt);
+        }
+
+        if(containsDefect(WeaponDefect.Unpolished)) {
+            defects.Remove(WeaponDefect.Unpolished);
+        }
     }
 
     // Update is called once per frame

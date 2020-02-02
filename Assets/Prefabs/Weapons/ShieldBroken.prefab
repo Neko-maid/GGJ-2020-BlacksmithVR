@@ -65,6 +65,8 @@ MonoBehaviour:
   rusted: {fileID: 2100000, guid: ff3a20f7cffaefd4a85c29f0cb4d043b, type: 2}
   defaultMat: {fileID: 0}
   polishPart: {fileID: 1546572701976432933}
+  points: 70
+  GameController: {fileID: 0}
   arrow1: {fileID: 3412427492269644471}
   arrow2: {fileID: 5372173279370622557}
   arrow3: {fileID: 8017082072260291028}

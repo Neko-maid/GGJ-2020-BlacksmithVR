@@ -100,7 +100,7 @@ MonoBehaviour:
   rusted: {fileID: 2100000, guid: ff3a20f7cffaefd4a85c29f0cb4d043b, type: 2}
   defaultMat: {fileID: 0}
   polishPart: {fileID: 7824310529755442550}
-  points: 0
+  points: 100
   GameController: {fileID: 0}
 --- !u!54 &603315966
 Rigidbody:
