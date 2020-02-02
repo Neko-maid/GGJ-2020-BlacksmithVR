@@ -12,16 +12,23 @@ public class SwordSharpening : BaseWeapon
 
     new void Start()
     {
+        base.Start();
         rend = GetComponent<Renderer>();
-
+        if(!defects.Contains(WeaponDefect.Blunt))
+        {
+            defects.Add(WeaponDefect.Blunt);
+        }
     }
 
 
     private void OnCollisionStay(Collision collision)
     {
         if (collision.collider.tag != "Grindstone") return;
-        if (TimeSharpened >= TotalTime) return;
-
+        if (TimeSharpened >= TotalTime)
+        {
+            defects.Remove(WeaponDefect.Blunt);
+            return;
+        }
         TimeSharpened += Time.deltaTime;
 
         //float amount = Mathf.Lerp(0f, TotalTime, TimeSharpened);
