@@ -74,7 +74,7 @@ public class BaseWeapon : MonoBehaviour
             GameController.IsWeaponActive = false;
 
             //gameObject.SetActive(false);
-            //Destroy(this);
+            Destroy(gameObject);
         }
     }
 
